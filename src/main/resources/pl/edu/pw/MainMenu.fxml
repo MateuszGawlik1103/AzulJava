@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.pw.gui.MainMenuController">
+   <children>
+       <MenuBar layoutX="6.0" layoutY="1.0" prefHeight="27.0" prefWidth="594.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+           <menus>
+               <Menu mnemonicParsing="false" text="File">
+                   <items>
+                       <MenuItem fx:id="ExitMenuItem" mnemonicParsing="false" onAction="#exit" text="Exit" />
+                   </items></Menu>
+               <Menu mnemonicParsing="false" text="Help">
+                   <items>
+                       <MenuItem mnemonicParsing="false" text="About" />
+                   </items>
+               </Menu>
+           </menus>
+       </MenuBar>
+      <RadioButton fx:id="joinGameRadioButton" layoutX="256.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleJoinGame" text="Join game" />
+      <RadioButton fx:id="localGameRadioButton" layoutX="35.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleLocalGame" text="Local game" />
+      <RadioButton fx:id="hostGameRadioButton" layoutX="480.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleHostGame" text="Host game" />
+      <TextField fx:id="playerNameTextField" layoutX="222.0" layoutY="81.0" promptText="Player name" />
+
+      <ChoiceBox fx:id="hostNumberOfPlayersChoiceBox" layoutX="425.0" layoutY="169.0" prefHeight="25.0" prefWidth="25.0" visible="false" value="2" onAction="#showButtons">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="2" />
+                  <String fx:value="3" />
+                  <String fx:value="4" />
+              </FXCollections>
+          </items>
+   </ChoiceBox>
+
+      <Text fx:id="hostNumberOfPlayersText" layoutX="467.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of players" visible="false"/>
+       <TextField fx:id="hostPortTextField" layoutX="488.0" layoutY="200.0" prefHeight="16.0" prefWidth="80.0" promptText="port" visible="false"/>
+       <Text fx:id="localNumberOfPlayersText" layoutX="59.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of players" visible="false" />
+
+       <Button layoutX="251.0" layoutY="331.0" onAction="#startGame" text="Start Game" />
+      <TextField fx:id="player1NameTextField" layoutX="17.0" layoutY="200.0" promptText="Player name" visible="false"/>
+      <TextField fx:id="player2NameTextField" layoutX="17.0" layoutY="232.0" promptText="Player name" visible="false"/>
+      <TextField fx:id="player3NameTextField" layoutX="17.0" layoutY="263.0" promptText="Player name" visible="false"/>
+
+       <ChoiceBox fx:id="localNumberOfPlayersChoiceBox" layoutX="17.0" layoutY="169.0" prefWidth="25.0" visible="false" value="2" onAction="#showButtons">
+           <items>
+               <FXCollections fx:factory="observableArrayList">
+                   <String fx:value="2" />
+                   <String fx:value="3" />
+                   <String fx:value="4" />
+               </FXCollections>
+           </items>
+       </ChoiceBox>
+      <TextField fx:id="serverSocketTextField" layoutX="215.0" layoutY="170.0" promptText="host:port" visible="false"/>
+
+   </children>
+</AnchorPane>

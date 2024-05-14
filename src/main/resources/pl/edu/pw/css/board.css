@@ -1,0 +1,43 @@
+.bodybg{
+    -fx-background-image: url('../img/paperbg.png');
+}
+
+.score_track{
+    -fx-background-image: url('../img/sky.jpg');
+}
+
+.btn{
+    -fx-cursor: hand;
+    -fx-background-color: #3cb7dd;
+    -fx-text-fill: #fff;
+    -fx-border-width: 0;
+    -fx-font-size: 14;
+    -fx-font-family: Lato;
+    -fx-focus-color: transparent;
+    -fx-border-radius: 10;
+    -fx-font-weight: bold;
+    -fx-start-margin: 8;
+    -fx-end-margin: 8;
+}
+
+.btn-red{
+    -fx-cursor: hand;
+    -fx-background-color: #ff6666;
+    -fx-text-fill: #fff;
+    -fx-border-width: 0;
+    -fx-font-size: 14;
+    -fx-font-family: Lato;
+    -fx-focus-color: transparent;
+    -fx-border-radius: 10;
+    -fx-font-weight: bold;
+    -fx-start-margin: 8;
+    -fx-end-margin: 8;
+}
+
+.btn-red:hover{
+    -fx-background-color: rgba(255, 102, 102, 0.7);
+}
+
+.btn:hover {
+    -fx-background-color: rgba(60, 183, 221, 0.7);
+}
